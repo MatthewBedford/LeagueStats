@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Database: {% endblock %}</h1>
+    <br>
+    {% for champ in champions %}
+    <img src="/champIcons/{{ champ['icon'] }}"> 
+        <h2>{{ champ['champName'] }}</h2>
+    <span class="badge badge-primary">{{ champ['champID'] }}</span>
+    <hr>
+{% endfor %}
+{% endblock %}
